@@ -6,7 +6,7 @@ while arg[0][0]!="-":
  if arg==[]:break
 while arg!=[]:
  if arg[0]=="-d":d=1
- elif arg[0]=="-i":i=arg[1]
+ elif arg[0]=="-i":i=arg[1];arg.pop(0)
  arg.pop(0)
 if i!="":
  for inp in i:ins.append(inp)
