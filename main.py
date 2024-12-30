@@ -10,6 +10,7 @@ while arg!=[]:
  elif arg[0]=="-w":
   if arg[1]=="file":c=open(arg[2]);c=c.read();arg.pop(0);arg.pop(0)
   elif arg[1]=="text":c=arg[2];arg.pop(0);arg.pop(0)
+ elif arg[0]=="-V"
  else:print(f"Invalid argument \"{arg[0]}\"");break
  arg.pop(0)
 while p<len(c):
