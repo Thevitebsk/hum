@@ -7,8 +7,10 @@ while arg[0][0]!="-":
 while arg!=[]:
  if arg[0]=="-d":d=1
  elif arg[0]=="-i":i=arg[1];arg.pop(0)
- elif arg[0]=="-f":c=open(arg[1]);c=c.read();arg.pop(0)
- else:print(f"Invalid argument \"{arg[0]}\"")
+ elif arg[0]=="-w":
+  if arg[1]=="file":c=open(arg[2]);c=c.read();arg.pop(0);arg.pop(0)
+  elif arg[1]=="text":c=arg[2];arg.pop(0);arg.pop(0)
+ else:print(f"Invalid argument \"{arg[0]}\"");break
  arg.pop(0)
 if i!="":
  for inp in i:ins.append(inp)
