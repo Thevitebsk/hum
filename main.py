@@ -1,5 +1,6 @@
 import sys
-p=m=l=instr=sinstr=sp=0;ts=[];s1=[];s2=[];os=[];ins=[];i="";s=[s1,s2];c="""'Hi'@#"""
+c=""
+p=m=l=instr=sinstr=sp=0;ts=[];s1=[];s2=[];os=[];ins=[];i="";s=[s1,s2]
 arg=sys.argv[0::];d=0
 while arg[0][0]!="-":
  arg.pop(0)
@@ -7,6 +8,8 @@ while arg[0][0]!="-":
 while arg!=[]:
  if arg[0]=="-d":d=1
  elif arg[0]=="-i":i=arg[1];arg.pop(0)
+ elif arg[0]=="-f":c=open(arg[1]);c=c.read();arg.pop(0)
+ else:print(f"Invalid argument \"{arg[0]}\"")
  arg.pop(0)
 if i!="":
  for inp in i:ins.append(inp)
@@ -47,5 +50,5 @@ while p<len(c):
   p=0;sinstr=instr
   if l==0:instr=0
 if instr!=0:sinstr=instr
-if d==1:print("\n"+c,s1,s2,i,sinstr,arg,"instructions",end="")
+if d==1:print("\n"+c,s1,s2,i,sinstr,"instructions",arg,end="")
 else:pass
