@@ -1,5 +1,4 @@
-import sys
-c=""
+import sys;c=""
 p=m=l=instr=sinstr=sp=0;ts=[];s1=[];s2=[];os=[];ins=[];i="";s=[s1,s2]
 arg=sys.argv[0::];d=0
 while arg[0][0]!="-":
