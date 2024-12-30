@@ -1,5 +1,7 @@
-import sys;c=""
-p=m=instr=sinstr=sp=ins=0;ts=[];s1=[];s2=[];os=[];i="";s=[s1,s2]
+import sys;c="";i=""
+ts=[];s1=[];s2=[];os=[];s=[s1,s2]
+p=m=instr=sinstr=sp=ins=0
+ver=0.0.5
 arg=sys.argv[0::];d=0
 while arg[0][0]!="-":
  arg.pop(0)
@@ -10,7 +12,7 @@ while arg!=[]:
  elif arg[0]=="-w":
   if arg[1]=="file":c=open(arg[2]);c=c.read();arg.pop(0);arg.pop(0)
   elif arg[1]=="text":c=arg[2];arg.pop(0);arg.pop(0)
- elif arg[0]=="-V"
+ elif arg[0]=="-V":print(ver)
  else:print(f"Invalid argument \"{arg[0]}\"");break
  arg.pop(0)
 while p<len(c):
