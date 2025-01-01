@@ -6,6 +6,7 @@ arg=sys.argv[1:];d=0
 while 1:
  try:
   if arg[0][0]!="-":arg.pop(0)
+  else:break
  except:break
 while arg!=[]:
  if arg[0]=="-d":d=1
