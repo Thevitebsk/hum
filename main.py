@@ -43,7 +43,8 @@ while p<len(c) and ignr==0:
   while 1:
    p-=1
    if c[p]!="\n":break
-   elif p>0:break
+   elif p>1:break
   instr=sinstr
 if instr!=0:sinstr=instr
-if d==1:print(f"\n\"{c}\" {s1} {s2} {i} {len(c)} bytes ({sinstr} instructions)")
+if ignr==0:print("\n",end="")
+if d==1:print(f"\"{c}\" {s1} {s2} {i} {len(c)} bytes ({sinstr} instructions)")
