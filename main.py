@@ -1,4 +1,4 @@
-import sys;c=i=""
+import sys;c="";i=""
 ts=[];s1=[];s2=[];os=[];s=[s1,s2]
 p=m=instr=sinstr=sp=ins=ignr=0
 VERSION="0.0.5"
@@ -46,5 +46,4 @@ while p<len(c) and ignr==0:
    elif p>0:break
   instr=sinstr
 if instr!=0:sinstr=instr
-if d==1:print(f"\n\"{c}\"",s1,s2,i,sinstr,"instructions",arg)
-else:pass
+if d==1:print(f"\n\"{c}\" {s1} {s2} {i} {len(c} bytes ({sinstr} instructions)")
