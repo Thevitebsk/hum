@@ -1,6 +1,5 @@
 import sys;c="";i=""
-ts=[];s1=[];s2=[];os=[];s=[s1,s2]
-p=m=instr=sinstr=sp=ins=ignr=0
+ts=[]; s1=[]; s2=[]; os=[]; s=[s1,s2]; p=m=instr=sinstr=sp=ins=ignr=0
 VERSION="0.0.5"
 arg=sys.argv[1:];d=0
 while 1:
@@ -40,10 +39,7 @@ while p<len(c) and ignr==0:
  elif c[p]=="\n":sinstr=instr
  p+=1
  if p==len(c):
-  while 1:
-   p-=1
-   if c[p]!="\n":break
-   elif p>1:break
+  while p>0 and c[p-1]=="\n":p-=1
   instr=sinstr
 if instr!=0:sinstr=instr
 if ignr==0 and c!="":print("\n",end="")
