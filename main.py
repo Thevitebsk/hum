@@ -1,11 +1,13 @@
-import sys;c="";i=""
+import sys;c=i=""
 ts=[];s1=[];s2=[];os=[];s=[s1,s2]
 p=m=instr=sinstr=sp=ins=ignr=0
 VERSION="0.0.5"
-arg=sys.argv[0::];d=0
-while arg[0][0]!="-":
- if not arg:break
- else:arg.pop(0)
+arg=sys.argv[1:];d=0
+while 1:
+ try:
+  if arg[0][0]!="-":arg.pop(0)
+  else:break
+ except:break
 while arg!=[]:
  if arg[0]=="-d":d=1
  elif arg[0]=="-i":i=arg[1];arg.pop(0)
@@ -26,9 +28,9 @@ while p<len(c) and ignr==0:
   s[sp].append(ts[0]);ts.pop();m=0;instr+=1
  elif c[p]=="@":s[sp].reverse();print(s[sp][0],end="");s[sp].reverse();instr+=1
  elif c[p]=="!":s.pop();instr+=1
-# elif c[p]=="_":
-#  if ins<len(i):s[sp].append(i[ins]);ins+=1;instr+=1
-#  else:print("\nEOI reached");break
+ elif c[p]=="_":
+  if ins<len(i):s[sp].append(i[ins]);ins+=1;instr+=1
+  else:print("\nEOI reached");break
  elif c[p]=="|":
   instr+=1
   while c[p]!="|":p+=1
