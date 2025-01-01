@@ -6,7 +6,6 @@ arg=sys.argv[1:];d=0
 while 1:
  try:
   if arg[0][0]!="-":arg.pop(0)
-  else:break
  except:break
 while arg!=[]:
  if arg[0]=="-d":d=1
@@ -46,5 +45,5 @@ while p<len(c) and ignr==0:
    elif p>1:break
   instr=sinstr
 if instr!=0:sinstr=instr
-if ignr==0:print("\n",end="")
+if ignr==0 and c!="":print("\n",end="")
 if d==1:print(f"\"{c}\" {s1} {s2} {i} {len(c)} bytes ({sinstr} instructions)")
