@@ -37,6 +37,8 @@ while p<len(c) and ignr==0:
   if sp==0:sp=1
   elif sp==1:sp=0
  elif c[p]=="\n":sinstr=instr
+ elif c[p]=="[":s[sp].append(len(s[sp]))
+ elif c[p]in list(map(str,range(10))):s[sp].append(int(c[p]))
  p+=1
  if p==len(c):
   while p>0 and c[p-1]=="\n":p-=1
