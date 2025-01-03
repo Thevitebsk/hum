@@ -1,5 +1,6 @@
 import sys;c="";i=""
-ts=[]; s1=[]; s2=[]; os=[]; s=[s1,s2]; p=m=instr=sinstr=sp=ins=ignr=io=0
+ts=[]; s1=[]; s2=[]; os=[]; s=[s1,s2]; p=m=instr=sinstr=sp=ins=ignr=io=stp=0
+VERSION="0.0.5"
 VERSION="0.0.1"
 arg=sys.argv[1:];d=0
 while 1:
@@ -47,4 +48,5 @@ while p<len(c) and ignr==0:
 if instr!=0:sinstr=instr
 if ignr==0 and c!="":print("\n",end="")
 if d==1:print(f"\"{c}\" {s1} {s2} {i} {len(c)} bytes ({sinstr} instructions)")
-if io==1:s[sp]=str(s[sp])
+if io==1:
+ while len(s[sp])>stp:print(s[sp][stp],end="");stp+=1
