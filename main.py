@@ -17,7 +17,7 @@ while arg!=[]:
  elif arg[0]=="-io":io=1
  else:print(f"Invalid argument \"{arg[0]}\"");break
  arg.pop(0)
-while p<len(c) and ignr==0:
+while p<len(c)and ignr==0:
  if c[p]=="#":break
  elif c[p]=="'":m=1;instr+=1
  elif m==1:
