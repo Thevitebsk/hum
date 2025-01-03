@@ -1,6 +1,5 @@
 import sys;c="";i=""
 ts=[]; s1=[]; s2=[]; os=[]; s=[s1,s2]; p=m=instr=sinstr=sp=ins=ignr=io=stp=0
-VERSION="0.0.5"
 VERSION="0.0.1"
 arg=sys.argv[1:];d=0
 while 1:
